@@ -60,6 +60,9 @@ svg {
   align-items: center;
   gap: 1.5rem;
 }
+.statuswrapper > p{
+  color: #858BB2;
+}
 
 .status {
   font-weight: bold;
