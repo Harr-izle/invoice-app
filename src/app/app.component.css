@@ -74,8 +74,13 @@ figure {
   width: 5rem;
   height: 5rem;
   overflow: hidden;
+}
+figure > img{
+  width:2.5rem;
+  height:2.5rem;
   border-radius: 100vw;
-  /* border: 1px solid green; */
+  margin-top: 1.5rem;
+  margin-left: 1rem;
 }
 
 /* content(the right side where the app is displayed) */
