@@ -83,7 +83,7 @@ export class InvoiceService {
         return { color: '#33D69F' };
       case 'pending':
         return { color: '#FF8F00' };
-      case 'pending':
+      case 'draft':
         return { color: '#373B53' };
       default:
         return {};
