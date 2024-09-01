@@ -29,6 +29,9 @@
 .backwrapper:hover{
   color: #7C5DFA;
 }
+.backwrapper.darkmodeText{
+  color: #888EB0;
+}
 
 /* back arrow svg */
 svg {

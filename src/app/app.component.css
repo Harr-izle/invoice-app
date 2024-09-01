@@ -1,5 +1,4 @@
 .maincontainer {
-  /* background-color: black; */
   height: 100vh;
   overflow: hidden;
   display: flex;
@@ -83,8 +82,7 @@ figure > img{
   margin-left: 1rem;
 }
 
-/* content(the right side where the app is displayed) */
-/* Add or Edit invoice screen */
+
 /* the side modal */
 .add-edit-invoice {
   /* display: none; */
@@ -96,7 +94,6 @@ figure > img{
 }
 /* actual form */
 .form {
-  /* border: 2px solid red; */
   position: absolute;
   background-color: white;
   width: 40rem;
@@ -118,14 +115,12 @@ figure > img{
 
 /* content */
 .content {
-  /* border: 2px solid green; */
   width: 50rem;
   min-height: 100%;
 }
 
 /*  menu starts here */
 .menu {
-  /* border: 2px solid red; */
   min-height: 6rem;
   display: flex;
   justify-content: space-between;
@@ -146,7 +141,10 @@ figure > img{
 }
 .totaltext {
   font-size: 1rem;
-  color: #7C5DFA;
+  color: #888EB0;
+}
+.totaltext.darkmodeText{
+  color: #dfe3fa;
 }
 
 /* controls on the right (add invoice and filter) */
@@ -261,7 +259,6 @@ label {
 
 /* empty Invoice Screen */
 .empty{
-  /* border: 2px solid red; */
   min-height: 30rem;
   display: flex;
   flex-direction: column;
