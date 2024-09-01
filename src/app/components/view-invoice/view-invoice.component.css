@@ -60,6 +60,9 @@ svg {
   align-items: center;
   gap: 1.5rem;
 }
+.statuswrapper > p{
+  color: #858BB2;
+}
 
 .status {
   font-weight: bold;
@@ -98,6 +101,7 @@ svg {
   place-items: center;
   border-radius: 4rem;
   cursor: pointer;
+  color: #7E88C3;
 }
 .delete {
   font-weight: bold;
