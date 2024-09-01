@@ -1,5 +1,5 @@
 import { createSelector, createFeatureSelector } from '@ngrx/store';
-import { AppState } from '../store/store.reducer';
+import { AppState } from '../store.reducer';
 import { Invoice } from '../../interfaces/invoice-interface';
 
 // Create a feature selector for the 'app' slice of state
@@ -14,7 +14,7 @@ export const selectInvoices = createSelector(
 export const selectSelectedFilters = createSelector(
   selectAppState,
   (state: AppState) => state.selectedFilters
-)
+);
 
 //  selector to view currently editing invoice
 export const selectEditedInvoice = createSelector(
@@ -29,9 +29,9 @@ export const selectFilteredInvoices = createSelector(
     if (selectedFilters.length === 3) {
       return invoices;
     } else {
-      return invoices.filter(invoice => selectedFilters.includes(invoice.status));
+      return invoices.filter((invoice) =>
+        selectedFilters.includes(invoice.status)
+      );
     }
   }
-
-  
 );

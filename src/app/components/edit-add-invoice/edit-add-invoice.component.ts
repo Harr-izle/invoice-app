@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InvoiceService } from '../service/invoice.service';
+import { InvoiceService } from '../../service/invoice.service';
 // imports forms
 import {
   FormBuilder,
@@ -13,9 +13,8 @@ import {
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Invoice } from '../../interfaces/invoice-interface';
-import * as InvoiceActions from '../store/store.actions';
-import { selectEditedInvoice } from '../selectors/invoice.selectors';
-
+import * as InvoiceActions from '../../store/store.actions';
+import { selectEditedInvoice } from '../../store/selectors/invoice.selectors';
 
 @Component({
   selector: 'app-edit-add-invoice',
@@ -76,7 +75,7 @@ export class EditAddInvoiceComponent {
         this.setItems(invoice.items); // Initialize the items array if editing
       }
 
-      // Set the invoice ID 
+      // Set the invoice ID
       this.invoiceId = invoice?.id || '';
     });
 

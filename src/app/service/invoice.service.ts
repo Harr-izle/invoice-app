@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Invoice } from '../../interfaces/invoice-interface';
+import { Invoice } from '../interfaces/invoice-interface';
 import { HttpClient } from '@angular/common/http';
 import { Store } from '@ngrx/store';
 import * as InvoiceActions from '../store/store.actions';

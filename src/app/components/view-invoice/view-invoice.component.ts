@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 // store and services data imports
 import { Invoice } from '../../interfaces/invoice-interface';
 import { Store } from '@ngrx/store';
-import { selectEditedInvoice } from '../selectors/invoice.selectors';
+import { selectEditedInvoice } from '../../store/selectors/invoice.selectors';
 import { Observable } from 'rxjs';
-import { InvoiceService } from '../service/invoice.service';
+import { InvoiceService } from '../../service/invoice.service';
 import { InvoiceItemsComponent } from '../invoice-items/invoice-items.component';
-import { updateInvoice } from '../store/store.actions';
-import { deleteInvoice } from '../store/store.actions';
+import { updateInvoice } from '../../store/store.actions';
+import { deleteInvoice } from '../../store/store.actions';
 
 @Component({
   selector: 'app-view-invoice',
@@ -49,7 +49,7 @@ export class ViewInvoiceComponent {
   }
   // delete invoice
   deleteInvoice(id: string) {
-   this.store.dispatch(deleteInvoice({ id }));
+    this.store.dispatch(deleteInvoice({ id }));
     this.service.confirmDeleteToggle();
     this.service.closeViewInvoice();
   }

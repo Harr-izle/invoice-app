@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Invoice } from '../../interfaces/invoice-interface';
+import { Invoice } from '../interfaces/invoice-interface';
 
 // Action to add an invoice
 export const addInvoice = createAction(
