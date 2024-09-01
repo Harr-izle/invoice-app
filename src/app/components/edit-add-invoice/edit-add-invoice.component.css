@@ -42,7 +42,7 @@ input {
 }
 input::placeholder{
   color: #252945;
-  /* font-weight: 600; */
+  
 }
 input.inputdarkmode::placeholder{
   color: #9798A3;
@@ -58,34 +58,48 @@ input:hover{
   display: flex;
   flex-direction: column;
   gap: 1rem;
+ 
 }
 
 /* Address container  */
 .addresses {
   display: flex;
   gap: 1rem;
+  margin-top: 2rem;
 }
 
 /* (city,postcode and country) container */
 .citypostal {
   display: flex;
   gap: 1rem;
+  
 }
+.receipientinfo{
+  margin-top: 2rem;
+}
+
+.receipientinfo .textinput{
+  margin-top: 2rem;
+}
+
 
 /* invoices dates container */
 .invoicedatesContainer {
   display: flex;
   gap: 1rem;
+  margin-top: 2rem;
 }
 
 .invoicedate,
 .paymentterms {
   width: 50%;
+
 }
 
 /* invoice date */
 .invoicedate:hover > input{
   outline: 1px solid #7C5DFA;
+  
 }
 
 
@@ -94,6 +108,7 @@ input:hover{
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  
 }
 
 .termscontainer {
@@ -166,6 +181,8 @@ input:hover{
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  margin-top: 2rem;
+  
 }
 .itemlist{
   font-size: 1.5rem;
@@ -186,6 +203,7 @@ input:hover{
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  margin-top: 2rem;
 }
 .plusicon {
   font-size: 1.1rem;
@@ -202,6 +220,10 @@ input:hover{
 }
 .additem.inputdarkmode > .plusicon{
   color: #D9E1FA
+}
+
+.projectdescription{
+  margin-top: 2rem;
 }
 
 /* item container */
@@ -296,6 +318,7 @@ input:hover{
 /* invalid input style */
 input.invalid {
   outline: 1px solid rgb(236, 87, 87);
+  background-color: rgba(236, 87, 87, 0.1);
 }
 label.invalidText {
   color: rgb(236, 87, 87);
