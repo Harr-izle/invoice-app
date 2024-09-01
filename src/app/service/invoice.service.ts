@@ -23,7 +23,7 @@ export class InvoiceService {
 
   // fetch invoice data from json
   getInvoices() {
-    return this.http.get<Invoice[]>('../../assets/invoiceJson/data.json');
+    return this.http.get<Invoice[]>('../../assets/data/data.json');
   }
 
   // add new invoice
