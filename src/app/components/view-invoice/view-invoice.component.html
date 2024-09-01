@@ -115,7 +115,7 @@
             ><span [class.idHarsh]="service.isDarkMode">#</span
             >{{ invoice.id }}</span
           >
-          <p class="normaltext" [class.darkmodeText]="service.isDarkMode">
+          <p class="colortext" [class.darkmodeText]="service.isDarkMode">
             {{ invoice.description }}
           </p>
         </span>
@@ -137,7 +137,7 @@
       <div class="bottom-details">
         <div class="dates">
           <span>
-            <p class="normaltext" [class.darkmodeText]="service.isDarkMode">
+            <p class="colortext" [class.darkmodeText]="service.isDarkMode">
               Invoice Date
             </p>
             <p class="bold" [class.darkmodeTextBold]="service.isDarkMode">
@@ -145,7 +145,7 @@
             </p>
           </span>
           <span>
-            <p class="normaltext" [class.darkmodeText]="service.isDarkMode">
+            <p class="colortext" [class.darkmodeText]="service.isDarkMode">
               Payment Due
             </p>
             <p class="bold" [class.darkmodeTextBold]="service.isDarkMode">
@@ -154,27 +154,27 @@
           </span>
         </div>
         <div class="addresses">
-          <p class="normaltext" [class.darkmodeText]="service.isDarkMode">
+          <p class="colortext" [class.darkmodeText]="service.isDarkMode">
             Bill To
           </p>
           <p class="bold" [class.darkmodeTextBold]="service.isDarkMode">
             {{ invoice.clientName }}
           </p>
-          <p class="normaltext" [class.darkmodeText]="service.isDarkMode">
+          <p class="colortext" [class.darkmodeText]="service.isDarkMode">
             {{ invoice.clientAddress.country }}
           </p>
-          <p class="normaltext" [class.darkmodeText]="service.isDarkMode">
+          <p class="colortext" [class.darkmodeText]="service.isDarkMode">
             {{ invoice.clientAddress.city }}
           </p>
-          <p class="normaltext" [class.darkmodeText]="service.isDarkMode">
+          <p class="colortext" [class.darkmodeText]="service.isDarkMode">
             {{ invoice.clientAddress.street }}
           </p>
-          <p class="normaltext" [class.darkmodeText]="service.isDarkMode">
+          <p class="colortext" [class.darkmodeText]="service.isDarkMode">
             {{ invoice.clientAddress.postCode }}
           </p>
         </div>
         <div class="email">
-          <p class="normaltext" [class.darkmodeText]="service.isDarkMode">
+          <p class="colortext" [class.darkmodeText]="service.isDarkMode">
             Sent To
           </p>
           <p class="bold" [class.darkmodeTextBold]="service.isDarkMode">
@@ -187,22 +187,22 @@
         <div class="iteminfo" [class.iteminfoDark]="service.isDarkMode">
           <div class="titles">
             <span
-              class="itemname normaltext"
+              class="itemname colortext"
               [class.darkmodeText]="service.isDarkMode"
               >Item Name</span
             >
             <span class="itemquantity">
-              <p class="normaltext" [class.darkmodeText]="service.isDarkMode">
+              <p class="colortext" [class.darkmodeText]="service.isDarkMode">
                 QTY.
               </p>
             </span>
             <span class="itemprice">
-              <p class="normaltext" [class.darkmodeText]="service.isDarkMode">
+              <p class="colortext" [class.darkmodeText]="service.isDarkMode">
                 Price
               </p>
             </span>
             <span class="itemtotal">
-              <p class="normaltext" [class.darkmodeText]="service.isDarkMode">
+              <p class="colortext" [class.darkmodeText]="service.isDarkMode">
                 Total
               </p>
             </span>

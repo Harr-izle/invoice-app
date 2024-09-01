@@ -129,7 +129,6 @@ figure {
 }
 /* text on the left */
 .menuhead {
-  /* border: 1px solid green; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -142,6 +141,7 @@ figure {
 }
 .totaltext {
   font-size: 1rem;
+  color: #7C5DFA;
 }
 
 /* controls on the right (add invoice and filter) */
@@ -153,7 +153,6 @@ figure {
 }
 
 .filterwrap {
-  /* border: 1px solid red; */
   width: fit-content;
   display: flex;
   align-items: center;

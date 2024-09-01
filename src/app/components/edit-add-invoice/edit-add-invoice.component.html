@@ -456,7 +456,7 @@
       [class.formdarkmode]="service.isDarkMode"
     >
       <!-- button shows when adding new -->
-      <div class="discardwrap" *ngIf="!service.editButtonClicked">
+      <div class="discardwrapper" *ngIf="!service.editButtonClicked">
         <button (click)="onDiscard()" class="discard">Discard</button>
       </div>
       <div class="savewrap">

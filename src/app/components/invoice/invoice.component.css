@@ -1,5 +1,4 @@
 .container {
-  /* border: 2px solid red; */
   background-color: white;
   box-shadow: 0 5px 5px 5px #e2e3f053;
   min-height: 6rem;
@@ -22,7 +21,7 @@
 .first{
   width: 60%;
   justify-content: start;
-  gap: 1rem;
+  gap: 4rem;
 }
 .second{
   /* border: 1px solid red; */

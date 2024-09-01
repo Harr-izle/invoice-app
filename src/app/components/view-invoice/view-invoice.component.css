@@ -6,7 +6,7 @@
   margin-block-start: 1rem;
 }
 
-.normaltext {
+.colortext {
   color: #7e88c3;
 }
 .bold {
@@ -16,7 +16,7 @@
 
 /* section 1 */
 .backwrapper {
-  /* border: 2px solid red; */
+
   width: fit-content;
   min-height: fit-content;
   display: flex;
