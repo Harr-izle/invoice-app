@@ -1,0 +1,345 @@
+.container {
+  /* border: 2px solid blue; */
+  height: 100%;
+}
+
+form {
+  /* border: 1px solid blue; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-block-start: 2rem;
+}
+
+fieldset {
+  border: none;
+}
+
+label{
+  color: #7e88c3;
+  font-size: 1.1rem;
+}
+h1 > span{
+  color: #7E88C3;
+}
+
+p{
+  color: #7c5dfa;
+  font-weight: bold;
+}
+
+
+input {
+  display: block;
+  border: none;
+  width: 100%;
+  height: 4rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  outline: 2px solid #dfe3fa;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+input::placeholder{
+  color: #252945;
+  /* font-weight: 600; */
+}
+input.inputdarkmode::placeholder{
+  color: #9798A3;
+}
+input:hover{
+  outline: 1px solid #7c5dfa;
+}
+/* form details */
+.details {
+  height: 86%;
+  overflow-y: auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* address container  */
+.addresses {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 1rem;
+}
+
+/* (city post code and country) container */
+.citypostal {
+  display: flex;
+  gap: 1rem;
+}
+
+/* invoices dates container */
+.invoicedatesContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.invoicedate,
+.paymentterms {
+  width: 50%;
+}
+
+/* invoice date */
+.invoicedate:hover > input{
+  outline: 1px solid #7C5DFA;
+}
+
+
+/* payment terms container */
+.paymentterms {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.termscontainer {
+  height: 100%;
+  border: 1px solid transparent;
+  border-radius: 0.3rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2rem;
+  padding-right: 0.5rem;
+}
+.termscontainer > img{
+  width: 0.9rem;
+  height: 0.8rem;
+}
+/* payment terms input */
+.termsinputdisplay{
+  /* border: 1px solid red; */
+  width: 80%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  padding-inline-start: 1rem;
+}
+
+
+/* on hover display terms menu */
+.termscontainer:hover > .termsMenu{
+  display: flex;
+}
+.termscontainer:hover{
+  border-color: #7C5DFA;
+}
+
+/* terms select menu */
+.termsMenu{
+  box-shadow: 0 10px 20px rgba(72,84,159,.25);
+  background-color: white;
+  color: white;
+  border-radius: 0.3rem;
+  position: absolute;
+  width: 100%;
+  min-height: 9rem;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+  display: none;
+}
+/* terms select list */
+.termsMenu > span{
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+.termsMenu > span:not(:last-child){
+  border-bottom: 1px solid #dfe3fa;
+}
+.termsMenu > span:hover > p{
+  color: #7C5DFA;
+}
+
+/* Items Controls styling */
+.items{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.itemlist{
+  font-size: 1.5rem;
+  color: #777F98;
+  }
+/* addnew item button */
+.additem {
+  background-color: #f9fafe;
+  color: #7e88c3;
+  display: block;
+  width: 80%;
+  min-height: 3.5rem;
+  margin: auto;
+  border-radius: 100vw;
+  border: none;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.plusicon {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #7C5DFA;
+}
+.additemtext {
+  font-size: 1.4rem;
+  font-weight: 100;
+  color: #7e88c3;
+}
+.additem.inputdarkmode > p{
+  color: #D9E1FA
+}
+.additem.inputdarkmode > .plusicon{
+  color: #D9E1FA
+}
+
+/* item container */
+.itemcontainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-name {
+  width: 40%;
+}
+.item-quantity,
+.item-price,
+.item-total {
+  width: 15%;
+}
+.totalinput{
+  outline: none;
+  cursor: default;
+}
+.totalinput:hover{
+  outline: none;
+}
+
+
+.remove-item {
+  /* border: 1px solid red; */
+  height: 4rem;
+  display: grid;
+  place-items: center;
+  align-self: end;
+  cursor: pointer;
+}
+/* form details ends here */
+
+/* form control buttons */
+.formcontrolbuttons {
+  box-shadow: 0 -5px 10px 5px #e2e3f0;
+  min-height: 4rem;
+  display: flex;
+  /* border: 2px solid red; */
+}
+
+/* discard wrap */
+.discardwrap {
+  /* border: 1px solid blue; */
+  width: 50%;
+  display: flex;
+  align-items: end;
+}
+/* save wrap */
+.savewrap {
+  /* border: 1px solid orangered; */
+  width: 50%;
+  display: flex;
+  gap: 0.5rem;
+  align-items: end;
+  justify-content: end;
+}
+
+/* buttons */
+.save ,.draft {
+  background-color: #ec5757;
+  color: white;
+  width: 45%;
+  height: 3rem;
+  border: none;
+  font-weight: bold;
+  padding: 0 10px;
+  display: grid;
+  place-items: center;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+.save{
+  background-color: #7c5dfa;
+}
+.draft{
+  background-color: #373b53;
+}
+
+.discard{
+  background-color: #f9fafe;
+  color: #7e88c3;
+  width: 30%;
+  height: 3rem;
+  font-weight: bold;
+  border: none;
+  display: grid;
+  place-items: center;
+  border-radius: 4rem;
+  cursor: pointer;
+}
+
+/* invalid input style */
+input.invalid {
+  outline: 1px solid rgb(236, 87, 87);
+}
+label.invalidText {
+  color: rgb(236, 87, 87);
+}
+
+/* darkmode tweaks */
+.formdarkmode{
+  background-color: #141625;
+  box-shadow: none;
+}
+.headingdarkmode{
+  color: white;
+}
+h1.headingdarkmode > span{
+  color: #7C5DFA;
+}
+
+.inputdarkmode{
+  background-color: #1E2139;
+  outline: none;
+  color: white;
+}
+.labeldarkmode{
+  color: #dfe3fa;
+}
+/* totalinputDarkmode */
+.totalinput.inputdarkmode{
+  background-color: transparent;
+}
+
+.termsMenu.inputdarkmode > span{
+  border-color: #141625;
+}
+.termsMenu.inputdarkmode > span > p{
+  color: white;
+}
+.termsMenu.inputdarkmode > span:hover > p{
+  color: #7c5dfa;
+}

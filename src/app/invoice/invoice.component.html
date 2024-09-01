@@ -1,0 +1,17 @@
+<div class="container" [class.darkmodeBackground]="service.isDarkMode">
+  <div class="first">
+    <span class="id" [class.darkmode]="service.isDarkMode"><span [class.idHarsh]="service.isDarkMode">#</span>{{invoice.id}}</span>
+    <span class="date">Due {{invoice.paymentDue | date}}</span>
+    <span class="name">{{invoice.clientName}}</span>
+  </div>
+  <div class="second">
+    <span class="total" [class.darkmode]="service.isDarkMode">{{ invoice.total|currency : "EUR" }}</span>
+    <span class="status" [ngStyle]="service.getStatusBackground(invoice.status)">
+      <span class="status-bullet" [ngStyle]="service.getStatusBullet(invoice.status)"></span>
+      <p [ngStyle]="service.getStatusText(invoice.status)">{{invoice.status | titlecase}}</p>
+    </span>
+    <span class="icon">
+      <img src="../../assets/icons/right.png" alt="arrow icon">
+    </span>
+  </div>
+</div>

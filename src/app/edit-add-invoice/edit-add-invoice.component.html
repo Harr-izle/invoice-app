@@ -1,0 +1,484 @@
+<div [class.formdarkmode]="service.isDarkMode" class="container">
+  <form [class.formdarkmode]="service.isDarkMode" [formGroup]="invoiceForm">
+    <!-- DETAILS STARTS HERE -->
+
+    <div class="details">
+      <!-- heading -->
+      <ng-container *ngIf="!service.editButtonClicked">
+        <h1 [class.headingdarkmode]="service.isDarkMode">New Invoice</h1>
+      </ng-container>
+      <ng-container *ngIf="service.editButtonClicked">
+        <h1 [class.headingdarkmode]="service.isDarkMode">
+          Edit <span>#</span>{{ invoiceId }}
+        </h1>
+      </ng-container>
+
+      <!-- sender details -->
+      <fieldset formGroupName="senderAddress">
+        <div class="senderinfo">
+          <p>Bill From</p>
+          <!--sender street address -->
+          <div class="textinput">
+            <label
+              [class.labeldarkmode]="service.isDarkMode"
+              [ngClass]="{
+                invalidText:
+                  formSubmitted &&
+                  invoiceForm.get('senderAddress.street')?.invalid
+              }"
+              for="senderstreet"
+              >Street Address</label
+            >
+            <input
+              [class.inputdarkmode]="service.isDarkMode"
+              [ngClass]="{
+                invalid:
+                  formSubmitted &&
+                  invoiceForm.get('senderAddress.street')?.invalid
+              }"
+              formControlName="street"
+              type="text"
+              name=""
+              id="senderstreet"
+            />
+          </div>
+          <!-- sender city postal country -->
+          <div class="addresses">
+            <!-- sender city postal -->
+            <div class="citypostal">
+              <span>
+                <label
+                  [class.labeldarkmode]="service.isDarkMode"
+                  [ngClass]="{
+                    invalidText:
+                      formSubmitted &&
+                      invoiceForm.get('senderAddress.city')?.invalid
+                  }"
+                  for="sendercity"
+                  >City</label
+                >
+                <input
+                  [class.inputdarkmode]="service.isDarkMode"
+                  [ngClass]="{
+                    invalid:
+                      formSubmitted &&
+                      invoiceForm.get('senderAddress.city')?.invalid
+                  }"
+                  formControlName="city"
+                  type="text"
+                  name=""
+                  id="sendercity"
+                />
+              </span>
+              <span>
+                <label
+                  [class.labeldarkmode]="service.isDarkMode"
+                  [ngClass]="{
+                    invalidText:
+                      formSubmitted &&
+                      invoiceForm.get('senderAddress.postCode')?.invalid
+                  }"
+                  for="senderpostal"
+                  >Postal Code</label
+                >
+                <input
+                  [class.inputdarkmode]="service.isDarkMode"
+                  [ngClass]="{
+                    invalid:
+                      formSubmitted &&
+                      invoiceForm.get('senderAddress.postCode')?.invalid
+                  }"
+                  formControlName="postCode"
+                  type="text"
+                  name=""
+                  id="senderpostal"
+                />
+              </span>
+            </div>
+            <!-- sender country -->
+            <div class="country">
+              <label
+                [class.labeldarkmode]="service.isDarkMode"
+                [ngClass]="{
+                  invalidText:
+                    formSubmitted &&
+                    invoiceForm.get('senderAddress.country')?.invalid
+                }"
+                for="sendercountry"
+                >Country</label
+              >
+              <input
+                [class.inputdarkmode]="service.isDarkMode"
+                [ngClass]="{
+                  invalid:
+                    formSubmitted &&
+                    invoiceForm.get('senderAddress.country')?.invalid
+                }"
+                formControlName="country"
+                type="text"
+                name=""
+                id="sendercountry"
+              />
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- receipient details -->
+
+      <div class="receipientinfo">
+        <p>Bill To</p>
+        <!--clients street address -->
+        <div class="textinput">
+          <label
+            [class.labeldarkmode]="service.isDarkMode"
+            [ngClass]="{
+              invalidText:
+                formSubmitted && invoiceForm.get('clientName')?.invalid
+            }"
+            for="clientsname"
+            >Clients's Name</label
+          >
+          <input
+            [class.inputdarkmode]="service.isDarkMode"
+            [ngClass]="{
+              invalid: formSubmitted && invoiceForm.get('clientName')?.invalid
+            }"
+            type="text"
+            name=""
+            formControlName="clientName"
+            id="clientsname"
+          />
+        </div>
+        <div class="textinput">
+          <label
+            [class.labeldarkmode]="service.isDarkMode"
+            [ngClass]="{
+              invalidText:
+                formSubmitted && invoiceForm.get('clientEmail')?.invalid
+            }"
+            for="clientemail"
+            >Client's Email</label
+          >
+          <input
+            [class.inputdarkmode]="service.isDarkMode"
+            [ngClass]="{
+              invalid: formSubmitted && invoiceForm.get('clientEmail')?.invalid
+            }"
+            formControlName="clientEmail"
+            type="text"
+            name=""
+            id="clientemail"
+            placeholder="e.g. email@example.com"
+          />
+        </div>
+
+        <fieldset formGroupName="clientAddress">
+          <div class="textinput">
+            <label
+              [class.labeldarkmode]="service.isDarkMode"
+              [ngClass]="{
+                invalidText:
+                  formSubmitted &&
+                  invoiceForm.get('clientAddress.street')?.invalid
+              }"
+              for="clientstreet"
+              >Street Address</label
+            >
+            <input
+              [class.inputdarkmode]="service.isDarkMode"
+              [ngClass]="{
+                invalid:
+                  formSubmitted &&
+                  invoiceForm.get('clientAddress.street')?.invalid
+              }"
+              formControlName="street"
+              type="text"
+              name=""
+              id="clientstreet"
+            />
+          </div>
+          <!-- clientscity postal country -->
+          <div class="addresses">
+            <!-- clients city postal -->
+            <div class="citypostal">
+              <span>
+                <label
+                  [class.labeldarkmode]="service.isDarkMode"
+                  [ngClass]="{
+                    invalidText:
+                      formSubmitted &&
+                      invoiceForm.get('clientAddress.city')?.invalid
+                  }"
+                  for="clientcity"
+                  >City</label
+                >
+                <input
+                  [class.inputdarkmode]="service.isDarkMode"
+                  [ngClass]="{
+                      invalid:
+                      formSubmitted &&
+                      invoiceForm.get('clientAddress.city')?.invalid
+                  }"
+                  formControlName="city"
+                  type="text"
+                  name=""
+                  id="clientcity"
+                />
+              </span>
+              <span>
+                <label
+                  [class.labeldarkmode]="service.isDarkMode"
+                  [ngClass]="{
+                    invalidText:
+                      formSubmitted &&
+                      invoiceForm.get('clientAddress.postCode')?.invalid
+                  }"
+                  for="clientpostal"
+                  >Postal Code</label
+                >
+                <input
+                  [class.inputdarkmode]="service.isDarkMode"
+                  [ngClass]="{
+                    invalid:
+                      formSubmitted &&
+                      invoiceForm.get('clientAddress.postCode')?.invalid
+                  }"
+                  formControlName="postCode"
+                  type="text"
+                  name=""
+                  id="clientpostal"
+                />
+              </span>
+            </div>
+            <!-- clients country -->
+            <div class="country">
+              <label
+                [class.labeldarkmode]="service.isDarkMode"
+                [ngClass]="{
+                  invalidText:
+                    formSubmitted &&
+                    invoiceForm.get('clientAddress.country')?.invalid
+                }"
+                for="clientcountry"
+                >Country</label
+              >
+              <input
+                [class.inputdarkmode]="service.isDarkMode"
+                [ngClass]="{
+                  invalid:
+                    formSubmitted &&
+                    invoiceForm.get('senderAddress.country')?.invalid
+                }"
+                formControlName="country"
+                type="text"
+                name=""
+                id="clientcountry"
+              />
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="invoicedatesContainer">
+          <div class="invoicedate">
+            <label [class.labeldarkmode]="service.isDarkMode" for="invoicedate"
+              >Invoice Date</label
+            >
+            <input
+              [class.inputdarkmode]="service.isDarkMode"
+              formControlName="createdAt"
+              type="date"
+              id="invoicedate"
+            />
+          </div>
+          <div class="paymentterms">
+            <label [class.labeldarkmode]="service.isDarkMode">
+              Payment Terms</label
+            >
+            <div
+              [class.inputdarkmode]="service.isDarkMode"
+              class="termscontainer"
+            >
+              <span
+                [class.inputdarkmode]="service.isDarkMode"
+                class="termsinputdisplay"
+                >{{ termsString }}</span
+              >
+              <!-- icon -->
+              <svg
+                width="11"
+                height="7"
+                viewBox="0 0 11 7"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L5.2279 5.2279L9.4558 1"
+                  stroke="#7C5DFA"
+                  stroke-width="2"
+                />
+              </svg>
+
+              <!-- floating menu -->
+              <div [class.inputdarkmode]="service.isDarkMode" class="termsMenu">
+                <span (click)="onTermsChange('1')"><p>Net 1 Day</p> </span>
+                <span (click)="onTermsChange('7')"><p>Net 7 Days</p></span>
+                <span (click)="onTermsChange('14')"><p>Net 14 Days</p></span>
+                <span (click)="onTermsChange('30')"><p>Net 30 Days</p></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- project description -->
+      <div class="projectdescription">
+        <label
+          [class.labeldarkmode]="service.isDarkMode"
+          [ngClass]="{
+            invalidText:
+              formSubmitted && invoiceForm.get('description')?.invalid
+          }"
+          for="projectdescription"
+          >Project Description</label
+        >
+        <input
+          [class.inputdarkmode]="service.isDarkMode"
+          [ngClass]="{
+            invalid: formSubmitted && invoiceForm.get('description')?.invalid
+          }"
+          formControlName="description"
+          type="text"
+          id="projectdescription"
+          placeholder="e.g. Graphic Design Service"
+        />
+      </div>
+
+      <!-- items -->
+      <div class="items">
+        <p class="itemlist">Item List</p>
+
+        <fieldset formArrayName="items">
+          <div
+            class="itemcontainer"
+            *ngFor="let item of itemsFormArray.controls; let i = index"
+            [formGroupName]="i"
+          >
+            <!-- item name -->
+            <div class="item-name">
+              <label
+                [class.labeldarkmode]="service.isDarkMode"
+                for="item-name-{{ i }}"
+                >Item Name</label
+              >
+              <input
+                [class.inputdarkmode]="service.isDarkMode"
+                [ngClass]="{
+                  invalid: formSubmitted && item.get('name')?.invalid
+                }"
+                formControlName="name"
+                type="text"
+                id="item-name-{{ i }}"
+              />
+            </div>
+            <!-- item quantity -->
+            <div class="item-quantity">
+              <label
+                [class.labeldarkmode]="service.isDarkMode"
+                for="item-quantity-{{ i }}"
+                >Qty.</label
+              >
+              <input
+                [class.inputdarkmode]="service.isDarkMode"
+                formControlName="quantity"
+                type="number"
+                id="item-quantity-{{ i }}"
+              />
+            </div>
+            <!-- item price -->
+            <div class="item-price">
+              <label
+                [class.labeldarkmode]="service.isDarkMode"
+                for="item-price-{{ i }}"
+                >Price</label
+              >
+              <input
+                [class.inputdarkmode]="service.isDarkMode"
+                id="item-price-{{ i }}"
+                formControlName="price"
+                type="number"
+                formControlName="price"
+              />
+            </div>
+            <!-- item total -->
+            <div class="item-total">
+              <label [class.labeldarkmode]="service.isDarkMode" for="item-total"
+                >Total</label
+              >
+              <input
+                [class.inputdarkmode]="service.isDarkMode"
+                class="totalinput"
+                [value]="
+                  (item.get('quantity')?.value || 0) *
+                  (item.get('price')?.value || 0)
+                "
+                formControlName="total"
+                readonly
+              />
+            </div>
+            <!-- this  removes items from the form -->
+            <div (click)="onRemoveItem(i)" class="remove-item">
+              <img src="../../assets/icons/deleteitem.png" alt="remove icon" />
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- this button adds items to the form -->
+        <button
+          [class.inputdarkmode]="service.isDarkMode"
+          class="additem"
+          (click)="onAddItem()"
+          type="button"
+        >
+          <span class="plusicon">+</span>
+          <p class="additemtext">Add New Item</p>
+        </button>
+      </div>
+    </div>
+    <!-- DETAILS ENDS HERE -->
+
+    <!-- form control buttons -->
+    <div
+      [style.justify-content]="
+        service.editButtonClicked ? 'flex-end' : 'space-between'
+      "
+      class="formcontrolbuttons"
+      [class.formdarkmode]="service.isDarkMode"
+    >
+      <!-- button shows when adding new -->
+      <div class="discardwrap" *ngIf="!service.editButtonClicked">
+        <button (click)="onDiscard()" class="discard">Discard</button>
+      </div>
+      <div class="savewrap">
+        <!-- buttons show when adding New -->
+        <ng-container *ngIf="!service.editButtonClicked">
+          <button (click)="onSaveAsDraft()" class="draft" type="submit">
+            Save As Draft
+          </button>
+          <button (click)="onSave()" class="save" type="submit">
+            Save & Send
+          </button>
+        </ng-container>
+        <!-- buttons show when editing -->
+        <ng-container *ngIf="service.editButtonClicked">
+          <button (click)="onDiscard()" class="draft" type="submit">
+            Cancel
+          </button>
+          <button (click)="onSave()" class="save" type="submit">
+            Save changes
+          </button>
+        </ng-container>
+      </div>
+    </div>
+  </form>
+</div>
