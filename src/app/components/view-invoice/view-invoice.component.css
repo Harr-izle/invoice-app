@@ -98,6 +98,7 @@ svg {
   place-items: center;
   border-radius: 4rem;
   cursor: pointer;
+  color: #7E88C3;
 }
 .delete {
   font-weight: bold;
