@@ -5,15 +5,15 @@ import { loadInvoices } from './store/store.actions';
 import {
   selectEditedInvoice,
   selectInvoices,
-} from './selectors/invoice.selectors';
-import { selectFilteredInvoices } from './selectors/invoice.selectors';
-import { Invoice } from '../interfaces/invoice-interface';
+} from './store/selectors/invoice.selectors';
+import { selectFilteredInvoices } from './store/selectors/invoice.selectors';
+import { Invoice } from './interfaces/invoice-interface';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { InvoiceService } from './service/invoice.service';
-import { InvoiceComponent } from './invoice/invoice.component';
-import { ViewInvoiceComponent } from './view-invoice/view-invoice.component';
-import { EditAddInvoiceComponent } from './edit-add-invoice/edit-add-invoice.component';
+import { InvoiceComponent } from './components/invoice/invoice.component';
+import { ViewInvoiceComponent } from './components/view-invoice/view-invoice.component';
+import { EditAddInvoiceComponent } from './components/edit-add-invoice/edit-add-invoice.component';
 import * as InvoiceActions from './store/store.actions';
 
 @Component({
@@ -37,7 +37,6 @@ export class AppComponent {
   sunIcon = '../assets/icons/sun.svg';
   moonIcon = '../assets/icons/moon.svg';
   imgUrl!: string;
-  
 
   constructor(private store: Store, public service: InvoiceService) {
     this.store.dispatch(loadInvoices());
@@ -47,7 +46,6 @@ export class AppComponent {
     this.invoices$ = this.store.select(selectFilteredInvoices);
     this.imgUrl = this.moonIcon;
   }
-  
 
   // toggle dark mode icons (sun and moon)
   toggleDarkMode() {

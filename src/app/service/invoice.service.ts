@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Invoice } from '../../interfaces/invoice-interface';
+import { Invoice } from '../interfaces/invoice-interface';
 import { HttpClient } from '@angular/common/http';
 import { Store } from '@ngrx/store';
 import * as InvoiceActions from '../store/store.actions';
@@ -23,7 +23,7 @@ export class InvoiceService {
 
   // fetch invoice data from json
   getInvoices() {
-    return this.http.get<Invoice[]>('../../assets/invoiceJson/data.json');
+    return this.http.get<Invoice[]>('../../assets/data/data.json');
   }
 
   // add new invoice

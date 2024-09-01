@@ -1,0 +1,31 @@
+.titles {
+  display: flex;
+  justify-content: space-between;
+}
+.itemname {
+  width: 50%;
+}
+.itemquantity {
+  text-align: center;
+  width: 10%;
+  color: #7e88c3;
+}
+.itemprice {
+  text-align: end;
+  width: 15%;
+  color: #7e88c3;
+
+}
+.itemtotal {
+  text-align: end;
+  width: 15%;
+}
+
+/* darkmode */
+.darkmodeText {
+  color: #dfe3fa;
+}
+
+.darkmodeTextBold {
+  color: white;
+}
